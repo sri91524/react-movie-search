@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../App.css'
 
 function Form(props){
     
@@ -17,8 +18,8 @@ const handleSubmit = (e) =>{
 return (        
     <div>
         <form onSubmit={handleSubmit}>
-            <input type="text" name="searchterm" value={formData.searchterm} onChange ={handleChange}/>
-            <input type="submit" value="submit" />
+            <input type="text" className="searchbox" name="searchterm" value={formData.searchterm} onChange ={handleChange}/>
+            <input className="btnsearch" type="submit" value="Submit" />
         </form>
     </div>
 )

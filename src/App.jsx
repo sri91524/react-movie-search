@@ -12,6 +12,7 @@ function App() {
     "harry+potter",
     "avenger",
     "inside+out",
+    "minions",
     "3+idiots",
     "RRR",
     "billa",
@@ -43,12 +44,10 @@ function App() {
       setMovie(data);
     }catch(e){
       console.error(e);
-    }
-   
+    }   
   };
 
   useEffect(() => {
-
     //Implemented Solution 2 - To generate movie using movieid
     // let movieId = Math.floor(Math.random() * (1300500 - 1300000 + 1)) + 1300000;
     // getMovie(`effect-${movieId}`);
@@ -59,7 +58,8 @@ function App() {
   },[])
   
   return (
-    <div>
+    <div className='content'>
+      <h1 className='heading'>Movie Search</h1>
       <Form moviesearch ={getMovie}/>
       <MovieDisplay movie = {movie}/>      
     </div>

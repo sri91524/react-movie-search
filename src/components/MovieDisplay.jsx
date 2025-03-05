@@ -2,16 +2,16 @@ function MovieDisplay({movie}){
     const loaded = () => {
          return (
             <>
-            <h1>{movie.Title}</h1>
-            <h2>{movie.Genre}</h2>
+            <h2>{movie.Title}</h2>
+            <h3>{movie.Genre}</h3>
             <img src={movie.Poster} alt ={movie.Title}/>
-            <h3>{movie.Year}</h3>
+            <h4>{movie.Year}</h4>
             </>
         );
     };
 
     const loading = () => {
-        return <h1>No Movie to Display.</h1>
+        return <h2>Loading....</h2>
     }
 
     return movie ? loaded() : loading();
